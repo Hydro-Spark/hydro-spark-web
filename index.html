@@ -290,5 +290,43 @@
             </div>
         </div>
     </footer>
+    <script>
+        // Lógica Calculadora
+        const waterInput = document.getElementById('waterInput');
+        const waterValue = document.getElementById('waterValue');
+        const kwhValue = document.getElementById('kwhValue');
+        const euroValue = document.getElementById('euroValue');
+
+        waterInput.addEventListener('input', () => {
+            const val = waterInput.value;
+            waterValue.innerText = val;
+            const kwh = Math.round((val / 800) * 1000);
+            kwhValue.innerText = kwh.toLocaleString();
+            const euros = Math.round(kwh * 12 * 0.30);
+            euroValue.innerText = euros.toLocaleString();
+        });
+
+        // Gráfico Ventaja Competitiva
+        const ctx = document.getElementById('generationChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['0h', '4h', '8h', '12h', '16h', '20h', '24h'],
+                datasets: [{
+                    label: 'Hydro-Spark (24/7)',
+                    data: [100, 100, 100, 100, 100, 100, 100],
+                    borderColor: '#FF6B00',
+                    backgroundColor: 'rgba(255,107,0,0.1)',
+                    fill: true
+                }, {
+                    label: 'Energía Solar',
+                    data: [0, 0, 20, 100, 70, 0, 0],
+                    borderColor: '#004A8F',
+                    borderDash: [5, 5]
+                }]
+            },
+            options: { responsive: true, plugins: { legend: { position: 'bottom' } } }
+        });
+    </script>
 </body>
 </html>
