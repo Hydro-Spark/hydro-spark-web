@@ -47,20 +47,31 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-gradient-to-br from-brand-dark to-brand-blue text-white text-center lg:text-left">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center">
-            <div class="lg:w-1/2">
-                <span class="inline-block py-1 px-3 rounded-full bg-brand-orange/20 text-brand-orange font-semibold text-sm mb-6 border border-brand-orange/30">Spin-off ETSIT | Grupo A.2.3</span>
-                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">Tu agua, <span class="text-brand-orange">tu energía.</span></h1>
-                <p class="text-xl text-blue-100 mb-10 max-w-2xl">Generamos hasta <strong class="text-white">1.000 kWh mensuales</strong> aprovechando el flujo residual de tus instalaciones. Eficiencia 24/7 sin impacto visual.</p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                    <a href="contacto.html" class="bg-brand-orange px-8 py-4 rounded-full font-bold text-lg shadow-xl">Estudio de Viabilidad</a>
-                    <a href="solucion.html" class="bg-white/10 border border-white/30 px-8 py-4 rounded-full font-bold text-lg backdrop-blur-sm">Descubre cómo</a>
+    <!-- Calculadora de ROI (Lógica Real) -->
+    <section id="roi" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 bg-gray-900 rounded-[3rem] p-10 text-white relative shadow-2xl">
+            <div class="absolute top-0 right-10 -mt-8 bg-brand-orange px-6 py-2 rounded-xl font-bold shadow-lg">Amortización ~2.5 años</div>
+            <h2 class="text-3xl font-bold text-center mb-10">Simulador de Impacto Financiero</h2>
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="space-y-12">
+                    <div>
+                        <label class="block text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Consumo Diario (m³/día)</label>
+                        <input type="range" id="waterInput" min="100" max="2500" value="800" class="w-full h-3 bg-white/10 rounded-lg appearance-none cursor-pointer accent-brand-orange">
+                        <div class="text-5xl font-black text-white mt-4"><span id="waterValue">800</span> m³</div>
+                    </div>
+                    <div class="p-4 bg-white/5 rounded-xl border border-white/10 text-sm italic">"Rentable para consumos mayores a 500 m³/día".</div>
                 </div>
-            </div>
-            <div class="lg:w-1/2 mt-16 lg:mt-0 flex justify-center">
-                <img src="logo-final.png" alt="Logo" class="w-80 md:w-[500px] h-auto drop-shadow-2xl">
+                <div class="space-y-6 text-center md:text-left">
+                    <div class="bg-brand-blue/30 p-6 rounded-2xl border border-white/10">
+                        <div class="text-xs uppercase font-bold opacity-60">Generación Mensual Est.</div>
+                        <div class="text-4xl font-bold"><span id="kwhValue">1.000</span> kWh</div>
+                    </div>
+                    <div class="bg-brand-orange/30 p-6 rounded-2xl border border-white/10">
+                        <div class="text-xs uppercase font-bold opacity-60">Ahorro Anual Estimado</div>
+                        <div class="text-4xl font-bold">€ <span id="euroValue">3.600</span></div>
+                    </div>
+                    <p class="text-[10px] text-gray-500 leading-tight">Cálculo basado en 0,30€/kWh y generación continua 24/7.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -80,5 +91,22 @@
             <div class="text-xs font-bold uppercase tracking-widest">© 2026 Hydro-Spark | ETSIT GIFIS</div>
         </div>
     </footer>
+
+    <script>
+        // Lógica de la calculadora dinámica
+        const waterInput = document.getElementById('waterInput');
+        const waterValue = document.getElementById('waterValue');
+        const kwhValue = document.getElementById('kwhValue');
+        const euroValue = document.getElementById('euroValue');
+
+        waterInput.addEventListener('input', () => {
+            const val = waterInput.value;
+            waterValue.innerText = val;
+            const kwh = Math.round((val / 800) * 1000);
+            kwhValue.innerText = kwh.toLocaleString();
+            const euros = Math.round(kwh * 12 * 0.30);
+            euroValue.innerText = euros.toLocaleString();
+        });
+    </script>
 </body>
 </html>
