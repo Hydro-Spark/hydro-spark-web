@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hydro-Spark | Eficiencia Hídrica e Innovación 24/7</title>
+    <title>Hydro-Spark | Energía limpia 24/7</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
@@ -28,263 +28,233 @@
     <style>
         body { font-family: 'Inter', sans-serif; }
         .smooth-scroll { scroll-behavior: smooth; }
-        .bg-mesh { background-color: #003366; background-image: radial-gradient(at 0% 0%, hsla(210,100%,20%,1) 0, transparent 50%), radial-gradient(at 50% 0%, hsla(20,100%,50%,1) 0, transparent 50%); }
     </style>
 </head>
 <body class="bg-gray-50 text-gray-800 smooth-scroll">
     <!-- Navegación -->
-    <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-md border-b border-gray-100">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-20 items-center">
-                <div class="flex-shrink-0 flex items-center">
-                    <span class="text-3xl font-extrabold text-brand-blue tracking-tighter">Hydro-<span class="text-brand-orange">Spark</span></span>
-                </div>
-                <div class="hidden lg:flex space-x-6 items-center">
-                    <a href="#about" class="text-gray-600 hover:text-brand-blue transition font-bold">Ingeniería</a>
-                    <a href="#solution" class="text-gray-600 hover:text-brand-blue transition font-bold">Tecnología</a>
-                    <a href="#esg" class="text-gray-600 hover:text-brand-blue transition font-bold">Sostenibilidad</a>
-                    <a href="#roi" class="text-gray-600 hover:text-brand-blue transition font-bold">Simulador ROI</a>
-                    <a href="#contact" class="bg-brand-orange hover:bg-brand-dark text-white px-6 py-2.5 rounded-full font-bold transition shadow-lg">Solicitar Estudio</a>
-                </div>
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between h-20 items-center">
+            <div class="flex-shrink-0">
+                <span class="text-3xl font-bold text-brand-blue tracking-tight">Hydro-<span class="text-brand-orange">Spark</span></span>
+            </div>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="#about" class="text-gray-600 hover:text-brand-blue transition font-medium">Sobre Nosotros</a>
+                <a href="#solution" class="text-gray-600 hover:text-brand-blue transition font-medium">Solución</a>
+                <a href="#roi" class="text-gray-600 hover:text-brand-blue transition font-medium">Calculadora ROI</a>
+                <a href="#subsidies" class="text-gray-600 hover:text-brand-blue transition font-medium">Subvenciones</a>
+                <a href="#contact" class="bg-brand-orange hover:bg-brand-orangelight text-white px-6 py-2.5 rounded-full font-semibold transition shadow-lg">Contactar</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-mesh">
-        <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')]"></div>
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center">
-            <div class="lg:w-1/2 text-center lg:text-left">
-                <span class="inline-block py-1 px-4 rounded-full bg-brand-orange/20 text-brand-orange font-bold text-sm mb-6 border border-brand-orange/30 backdrop-blur-md">Proyecto GIFIS - ETSIT | Grupo A.2.3</span>
-                <h1 class="text-5xl lg:text-7xl font-black text-white mb-6 leading-tight tracking-tight">
-                    Tu agua, <br><span class="text-brand-orange">Tu energía.</span>
-                </h1>
-                <p class="text-xl text-blue-100 mb-10 max-w-xl mx-auto lg:mx-0">
-                    Transformamos el flujo residual y la presión de tus tuberías en hasta <strong class="text-white">1.000 kWh mensuales</strong> de electricidad limpia 24/7.
-                </p>
-                <div class="flex flex-wrap gap-4 justify-center lg:justify-start">
-                    <a href="#roi" class="bg-brand-orange hover:bg-white hover:text-brand-orange text-white px-8 py-4 rounded-full font-bold transition shadow-2xl">Calculadora de Ahorro</a>
-                    <a href="#solution" class="bg-white/10 hover:bg-white/20 text-white border border-white/30 px-8 py-4 rounded-full font-bold transition backdrop-blur-sm">Ver Tecnología</a>
+    <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-gradient-to-br from-brand-dark to-brand-blue text-white text-center lg:text-left">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center">
+            <div class="lg:w-1/2">
+                <span class="inline-block py-1 px-3 rounded-full bg-brand-orange/20 text-brand-orange font-semibold text-sm mb-6 border border-brand-orange/30">Spin-off ETSIT | Grupo A.2.3</span>
+                <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">Tu agua, <span class="text-brand-orange">tu energía.</span></h1>
+                <p class="text-xl text-blue-100 mb-10 max-w-2xl">Generamos hasta <strong class="text-white">1.000 kWh mensuales</strong> aprovechando el flujo residual de tus instalaciones. Eficiencia 24/7 sin impacto visual.</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="#contact" class="bg-brand-orange px-8 py-4 rounded-full font-bold text-lg shadow-xl">Estudio de Viabilidad</a>
+                    <a href="#solution" class="bg-white/10 border border-white/30 px-8 py-4 rounded-full font-bold text-lg backdrop-blur-sm">Descubre cómo</a>
                 </div>
             </div>
             <div class="lg:w-1/2 mt-16 lg:mt-0 flex justify-center">
-                <img src="logo-final.png" alt="Hydro-Spark Logo" class="w-80 md:w-[500px] h-auto drop-shadow-2xl animate-pulse">
+                <img src="logo-final.png" alt="Logo" class="w-80 md:w-[500px] h-auto drop-shadow-2xl">
             </div>
         </div>
     </section>
 
-    <!-- Sección de Ingeniería y Equipo (Basada en Estructura Organizativa) -->
+    <!-- Sobre Nosotros (Recuperado y Ampliado) -->
     <section id="about" class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
-                <div class="space-y-6">
-                    <h2 class="text-4xl font-bold text-brand-dark">Rigor Científico de la <span class="text-brand-orange">ETSIT</span></h2>
-                    <p class="text-lg text-gray-600 leading-relaxed">
-                        Hydro-Spark nace como una solución de ingeniería avanzada desarrollada por especialistas en <strong>Ingeniería Física</strong>. No solo vendemos tecnología; aplicamos los principios de la mecánica de fluidos para maximizar el ROI industrial.
-                    </p>
-                    <div class="grid grid-cols-2 gap-4 pt-4 text-sm font-bold">
-                        <div class="p-4 bg-gray-50 border-l-4 border-brand-blue">Dirección: CEO Estratégico</div>
-                        <div class="p-4 bg-gray-50 border-l-4 border-brand-orange">I+D: Optimización Física[cite: 8]</div>
-                        <div class="p-4 bg-gray-50 border-l-4 border-brand-blue">Sostenibilidad: ESG & CAE[cite: 8]</div>
-                        <div class="p-4 bg-gray-50 border-l-4 border-brand-orange">Operaciones: Instalación Bypass[cite: 8]</div>
-                    </div>
-                </div>
-                <div class="relative group">
-                    <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=800" class="rounded-3xl shadow-2xl transition group-hover:scale-105 duration-500">
-                    <div class="absolute -bottom-6 -right-6 bg-brand-orange text-white p-8 rounded-2xl shadow-xl">
-                        <span class="text-4xl font-black italic">24/7</span><br>Generación Continua
-                    </div>
-                </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2">
+                <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1000" class="rounded-2xl shadow-2xl aspect-video object-cover">
+            </div>
+            <div class="md:w-1/2">
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-6">Innovación nacida en la <span class="text-brand-orange">ETSIT</span></h2>
+                <p class="text-lg text-gray-600 mb-6 leading-relaxed">Somos un equipo de <strong>Ingeniería Física</strong> de la Escuela Técnica Superior de Ingenieros de Telecomunicación[cite: 7]. Aplicamos rigor científico para democratizar la micro-generación hidráulica en entornos urbanos industriales.</p>
+                <div class="bg-orange-50 border-l-4 border-brand-orange p-4 rounded-r-lg font-medium text-brand-dark italic">"Rigor científico y excelencia técnica aplicados a la rentabilidad industrial"[cite: 6].</div>
             </div>
         </div>
     </section>
 
-    <!-- Solución Técnica Detallada (Basada en Memoria) -->
-    <section id="solution" class="py-24 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
-            <h2 class="text-4xl font-bold text-brand-dark">Eficiencia Invisible, Seguridad Absoluta</h2>
-            <p class="text-xl text-gray-600 mt-4">Cumplimiento estricto del Código Técnico de la Edificación (CTE HS 4)[cite: 8].</p>
+    <!-- Solución Técnica (CTE HS 4 y Bypass) -->
+    <section id="solution" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 text-center mb-16">
+            <h2 class="text-3xl md:text-4xl font-bold text-brand-dark">Tecnología de Vanguardia</h2>
+            <p class="text-xl text-gray-600 mt-4">Integración perfecta bajo cumplimiento estricto del <strong>CTE HS 4</strong>.</p>
         </div>
-        <div class="grid lg:grid-cols-3 gap-8">
-            <div class="bg-white p-10 rounded-3xl shadow-lg border border-gray-100">
-                <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center text-brand-blue mb-6">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
-                </div>
-                <h3 class="text-2xl font-bold mb-4">Microturbinas en Tubería</h3>
-                <p class="text-gray-600">Diseño compacto capaz de operar con presiones residuales, optimizando el caudal sin pérdida de carga significativa.</p>
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12">
+            <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
+                <h3 class="text-2xl font-bold text-brand-dark mb-4">Sistema de Microturbinas</h3>
+                <p class="text-gray-600 mb-6 text-lg leading-relaxed">Instalación en línea con las tuberías principales para aprovechar la presión residual. Diseño hidrodinámico que maximiza la conversión de energía cinética.</p>
+                <ul class="space-y-2 font-semibold">
+                    <li class="text-green-600 flex items-center">✓ Materiales de grado aeroespacial</li>
+                    <li class="text-green-600 flex items-center">✓ Mantenimiento predictivo IoT</li>
+                </ul>
             </div>
-            <div class="bg-brand-dark p-10 rounded-3xl shadow-xl text-white transform scale-105 relative z-10">
-                <div class="w-14 h-14 bg-brand-orange rounded-2xl flex items-center justify-center text-white mb-6">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
-                </div>
-                <h3 class="text-2xl font-bold mb-4 text-brand-orange">Sistema Bypass Fail-Safe</h3>
-                <p class="text-blue-100">Nuestra ventaja competitiva clave: garantiza el flujo de agua nominal en caso de mantenimiento o avería, asegurando la potabilidad.</p>
-            </div>
-            <div class="bg-white p-10 rounded-3xl shadow-lg border border-gray-100">
-                <div class="w-14 h-14 bg-orange-100 rounded-2xl flex items-center justify-center text-brand-orange mb-6">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path></svg>
-                </div>
-                <h3 class="text-2xl font-bold mb-4">Monitorización IoT</h3>
-                <p class="text-gray-600">Seguimiento en tiempo real del rendimiento energético y mantenimiento predictivo vía web y app[cite: 8].</p>
+            <div class="bg-brand-dark p-8 rounded-2xl shadow-xl text-white">
+                <h3 class="text-2xl font-bold mb-4">Sistema Bypass de Emergencia</h3>
+                <p class="text-blue-100 mb-6 text-lg leading-relaxed">Garantía absoluta de suministro. En caso de incidencia, el flujo de agua se mantiene al 100% sin afectar la potabilidad ni la presión de la red[cite: 7, 8].</p>
+                <ul class="space-y-2 font-semibold">
+                    <li class="text-brand-orange flex items-center">✓ Apertura mecánica fail-safe</li>
+                    <li class="text-brand-orange flex items-center">✓ Detección de anomalías en milisegundos</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <!-- ESG y Certificaciones Sostenibles (Nueva Sección Clave) -->
-    <section id="esg" class="py-20 bg-brand-blue relative text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
-            <div class="space-y-8">
-                <h2 class="text-4xl font-bold">Impulso a las Certificaciones <span class="text-brand-orange">ESG</span></h2>
-                <p class="text-xl text-blue-100 leading-relaxed">
-                    Hydro-Spark es la solución ideal para promotoras que buscan obtener los máximos sellos de sostenibilidad del mercado[cite: 7, 8].
-                </p>
-                <div class="flex flex-wrap gap-8">
-                    <div class="text-center">
-                        <div class="w-24 h-24 bg-white/10 rounded-full flex items-center justify-center border-2 border-white/20 mb-3 mx-auto">LEED</div>
-                        <span class="text-sm font-bold opacity-80">Edificios Sostenibles</span>
-                    </div>
-                    <div class="text-center">
-                        <div class="w-24 h-24 bg-white/10 rounded-full flex items-center justify-center border-2 border-white/20 mb-3 mx-auto">BREEAM</div>
-                        <span class="text-sm font-bold opacity-80">Calidad Ambiental</span>
-                    </div>
-                    <div class="text-center">
-                        <div class="w-24 h-24 bg-white/10 rounded-full flex items-center justify-center border-2 border-white/20 mb-3 mx-auto">CAE</div>
-                        <span class="text-sm font-bold opacity-80">Venta de Ahorros</span>
-                    </div>
-                </div>
-                <p class="p-6 bg-brand-dark/50 rounded-2xl border border-white/10 italic">
-                    "Emitimos el informe de reducción de huella de carbono válido para auditorías ESG corporativas"[cite: 7, 8].
-                </p>
+    <!-- Ventaja Competitiva: Gráfica -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-3xl font-bold text-brand-dark mb-6">Generación 24/7 vs. Solar</h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-8">Atacamos la debilidad de las renovables tradicionales: la intermitencia[cite: 8]. Mientras el sol se pone, el flujo de agua en hoteles e industrias sigue generando rentabilidad de forma constante[cite: 7, 8].</p>
             </div>
-            <div class="bg-white p-8 rounded-3xl shadow-2xl">
-                <h3 class="text-brand-dark font-black mb-6 text-center text-2xl uppercase tracking-widest">Diferencial Energético</h3>
+            <div class="bg-gray-50 p-6 rounded-3xl border border-gray-200 shadow-inner">
                 <canvas id="generationChart"></canvas>
-                <p class="text-gray-400 text-xs mt-6 text-center font-bold">Comparativa: Generación Continua vs. Intermitencia Fotovoltaica[cite: 7]</p>
             </div>
         </div>
     </section>
 
-    <!-- Calculadora Dinámica ROI (Métricas Lean Canvas) -->
-    <section id="roi" class="py-24 bg-white">
-        <div class="max-w-4xl mx-auto px-4 bg-gray-900 rounded-[40px] shadow-3xl p-10 md:p-16 text-white relative">
-            <div class="absolute top-0 right-10 -mt-10 bg-brand-orange px-8 py-3 rounded-2xl font-black shadow-lg">AMORTIZACIÓN ~2.5 AÑOS</div>
-            <h2 class="text-3xl font-black mb-12 text-center tracking-tight">Simulador B2B de Rentabilidad</h2>
-            <div class="grid md:grid-cols-2 gap-16">
+    <!-- Sostenibilidad y ESG (Sección Independiente) -->
+    <section id="esg" class="py-20 bg-brand-blue text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-8 uppercase tracking-widest">Compromiso ESG Corporativo</h2>
+            <p class="text-xl text-blue-100 mb-12 max-w-3xl mx-auto leading-relaxed">Ayudamos a las empresas a cumplir sus objetivos ambientales sin grandes obras[cite: 8]. Hydro-Spark es el aliado clave para obtener certificaciones internacionales[cite: 7, 8].</p>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-6 bg-white/10 rounded-2xl border border-white/20">
+                    <div class="text-2xl font-black mb-2">LEED</div>
+                    <p class="text-sm opacity-80 italic">Liderazgo en Energía y Diseño Ambiental[cite: 7, 8].</p>
+                </div>
+                <div class="p-6 bg-white/10 rounded-2xl border border-white/20">
+                    <div class="text-2xl font-black mb-2">BREEAM</div>
+                    <p class="text-sm opacity-80 italic">Certificado mundial de construcción sostenible[cite: 7, 8].</p>
+                </div>
+                <div class="p-6 bg-white/10 rounded-2xl border border-white/20">
+                    <div class="text-2xl font-black mb-2">Informe Huella</div>
+                    <p class="text-sm opacity-80 italic">Reporte válido para auditorías ESG corporativas[cite: 7, 8].</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculadora de ROI (Lógica Real) -->
+    <section id="roi" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 bg-gray-900 rounded-[3rem] p-10 text-white relative shadow-2xl">
+            <div class="absolute top-0 right-10 -mt-8 bg-brand-orange px-6 py-2 rounded-xl font-bold shadow-lg">Amortización ~2.5 años[cite: 7]</div>
+            <h2 class="text-3xl font-bold text-center mb-10">Simulador de Impacto Financiero</h2>
+            <div class="grid md:grid-cols-2 gap-12">
                 <div class="space-y-12">
                     <div>
-                        <label class="block text-xs font-black text-brand-orange uppercase mb-6 tracking-widest">Consumo Diario Estimado (m³)</label>
+                        <label class="block text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Consumo Diario (m³/día)</label>
                         <input type="range" id="waterInput" min="100" max="2500" value="800" class="w-full h-3 bg-white/10 rounded-lg appearance-none cursor-pointer accent-brand-orange">
-                        <div class="text-6xl font-black mt-6"><span id="waterValue">800</span> <small class="text-xl opacity-40">m³/día</small></div>
+                        <div class="text-5xl font-black text-white mt-4"><span id="waterValue">800</span> m³</div>
                     </div>
-                    <div class="p-6 bg-white/5 rounded-2xl border border-white/10 text-sm">
-                        Si tus instalaciones superan los <strong>500 m³ diarios</strong>, Hydro-Spark es altamente rentable[cite: 7].
-                    </div>
+                    <div class="p-4 bg-white/5 rounded-xl border border-white/10 text-sm italic">"Rentable para consumos mayores a 500 m³/día"[cite: 7, 8].</div>
                 </div>
-                <div class="grid gap-6">
-                    <div class="bg-white/5 p-8 rounded-3xl border border-white/10">
-                        <div class="text-xs font-black uppercase opacity-40 mb-2 tracking-widest">Generación Mensual</div>
-                        <div class="text-5xl font-black text-brand-orange"><span id="kwhValue">1.000</span> <small class="text-lg">kWh</small></div>
+                <div class="space-y-6 text-center md:text-left">
+                    <div class="bg-brand-blue/30 p-6 rounded-2xl border border-white/10">
+                        <div class="text-xs uppercase font-bold opacity-60">Generación Mensual Est.</div>
+                        <div class="text-4xl font-bold"><span id="kwhValue">1.000</span> kWh</div>
                     </div>
-                    <div class="bg-white/5 p-8 rounded-3xl border border-white/10">
-                        <div class="text-xs font-black uppercase opacity-40 mb-2 tracking-widest">Ahorro Anual (€)</div>
-                        <div class="text-5xl font-black text-blue-400"><span id="euroValue">3.600</span> <small class="text-lg">€</small></div>
-                        <p class="text-[10px] mt-4 text-gray-500">Estimación basada en 0,30€/kWh. Sujeto a presión de red[cite: 7, 8].</p>
+                    <div class="bg-brand-orange/30 p-6 rounded-2xl border border-white/10">
+                        <div class="text-xs uppercase font-bold opacity-60">Ahorro Anual Estimado</div>
+                        <div class="text-4xl font-bold">€ <span id="euroValue">3.600</span></div>
                     </div>
+                    <p class="text-[10px] text-gray-500 leading-tight">Cálculo basado en 0,30€/kWh y generación continua 24/7[cite: 7].</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Subvenciones y Marco Legal (PESTEL Político/Económico) -->
-    <section id="subsidies" class="py-24 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-16 items-center">
+    <!-- Subvenciones (PESTEL Político/Legal) -->
+    <section id="subsidies" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-16 items-center">
             <div>
-                <h2 class="text-4xl font-bold text-brand-dark mb-8">Viabilidad Económica Blindada</h2>
-                <div class="space-y-6">
-                    <div class="flex gap-6">
-                        <div class="w-16 h-16 bg-brand-orange rounded-2xl flex items-center justify-center shrink-0 shadow-lg text-white font-black italic">RD</div>
-                        <div>
-                            <h4 class="text-xl font-black text-gray-900 mb-1">Real Decreto 477/2021</h4>
-                            <p class="text-gray-600">Subvenciones de hasta el 45% del coste total a fondo perdido[cite: 8].</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-6">
-                        <div class="w-16 h-16 bg-brand-blue rounded-2xl flex items-center justify-center shrink-0 shadow-lg text-white font-black italic">IBI</div>
-                        <div>
-                            <h4 class="text-xl font-black text-gray-900 mb-1">Bonificaciones Fiscales</h4>
-                            <p class="text-gray-600">Deducciones municipales de hasta el 50% en IBI y 95% en el ICIO[cite: 8].</p>
-                        </div>
-                    </div>
-                    <div class="flex gap-6">
-                        <div class="w-16 h-16 bg-gray-800 rounded-2xl flex items-center justify-center shrink-0 shadow-lg text-white font-black italic">CAE</div>
-                        <div>
-                            <h4 class="text-xl font-black text-gray-900 mb-1">RD 36/2023: Mercado de CAEs</h4>
-                            <p class="text-gray-600">Monetiza cada kWh ahorrado vendiendo certificados energéticos en el mercado[cite: 8].</p>
-                        </div>
-                    </div>
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-6">Financiación y Subvenciones</h2>
+                <p class="text-lg text-gray-600 leading-relaxed mb-8">Aprovecha el <strong>RD 477/2021</strong> que subvenciona hasta el 45% del coste[cite: 8]. También ayudamos a monetizar cada kWh mediante el sistema de <strong>CAEs (RD 36/2023)</strong>[cite: 8].</p>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="p-4 bg-white shadow-md rounded-xl font-bold text-center border-t-4 border-brand-orange">-50% IBI</div>
+                    <div class="p-4 bg-white shadow-md rounded-xl font-bold text-center border-t-4 border-brand-blue">-95% ICIO</div>
                 </div>
             </div>
-            <div class="bg-brand-dark rounded-[3rem] p-12 text-white relative overflow-hidden shadow-2xl">
-                <div class="absolute top-0 right-0 p-8 opacity-10 font-black text-9xl">ROI</div>
-                <h3 class="text-2xl font-bold mb-8">PVP: 4.000 € / unidad[cite: 8]</h3>
-                <ul class="space-y-4 mb-10 text-blue-100">
-                    <li class="flex gap-3">✓ Coste de instalación: 500 €[cite: 8]</li>
-                    <li class="flex gap-3">✓ Mantenimiento anual opcional: 300 €[cite: 8]</li>
-                    <li class="flex gap-3">✓ Amortización acelerada vía Next Gen EU[cite: 8]</li>
+            <div class="bg-brand-dark p-10 rounded-[3rem] text-white shadow-2xl">
+                <h3 class="text-2xl font-bold mb-6">Inversión Hydro-Spark</h3>
+                <p class="text-3xl font-black text-brand-orange mb-8">4.000 € <small class="text-lg font-normal text-blue-100">/ unidad[cite: 8]</small></p>
+                <ul class="space-y-4 mb-8 text-blue-100">
+                    <li class="flex items-center">✓ Instalación técnica: 500 €[cite: 8]</li>
+                    <li class="flex items-center">✓ Mantenimiento preventivo: 300 €/año[cite: 8]</li>
+                    <li class="flex items-center">✓ Gestión íntegra de ayudas estatales[cite: 7]</li>
                 </ul>
-                <a href="#contact" class="block text-center bg-white text-brand-dark py-4 rounded-2xl font-black hover:bg-brand-orange hover:text-white transition shadow-xl">Solicitar Propuesta Personalizada</a>
+                <a href="#contact" class="block text-center bg-white text-brand-dark py-4 rounded-2xl font-bold hover:bg-brand-orange hover:text-white transition">Solicitar Propuesta Técnica</a>
             </div>
         </div>
     </section>
 
-    <!-- Formulario de Contacto (Canal B2B Directo) -->
-    <section id="contact" class="py-24 bg-gray-900 text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="max-w-2xl mx-auto bg-white rounded-3xl p-10 md:p-16 text-gray-900 shadow-2xl">
-                <h2 class="text-3xl font-black text-center mb-10 tracking-tighter">Estudio de Viabilidad B2B</h2>
+    <!-- Contacto (Restaurado Estilo Original) -->
+    <section id="contact" class="py-24 bg-gray-900 text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-6 tracking-tighter">Empieza a Ahorrar Hoy</h2>
+                <p class="text-xl text-gray-400 leading-relaxed">Especializados en complejos hoteleros y plantas industriales[cite: 8]. Solicita un estudio de viabilidad sin compromiso.</p>
+            </div>
+            <div class="max-w-2xl mx-auto bg-white rounded-2xl p-8 shadow-2xl text-gray-900">
                 <form class="space-y-6">
                     <div class="grid md:grid-cols-2 gap-6">
                         <div>
-                            <label class="block text-xs font-black text-gray-400 uppercase mb-2">Nombre Responsable</label>
-                            <input type="text" class="w-full p-4 border border-gray-200 rounded-xl bg-gray-50 focus:ring-2 focus:ring-brand-blue outline-none" placeholder="COO / Gestor Energético">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Nombre completo</label>
+                            <input type="text" class="w-full px-4 py-3 rounded-lg border border-gray-300 outline-none focus:ring-2 focus:ring-brand-blue" placeholder="Ej. Juan Pérez">
                         </div>
                         <div>
-                            <label class="block text-xs font-black text-gray-400 uppercase mb-2">Empresa / Complejo</label>
-                            <input type="text" class="w-full p-4 border border-gray-200 rounded-xl bg-gray-50 focus:ring-2 focus:ring-brand-blue outline-none" placeholder="Cadenas Hoteleras / Ind.">
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Empresa / Hotel</label>
+                            <input type="text" class="w-full px-4 py-3 rounded-lg border border-gray-300 outline-none focus:ring-2 focus:ring-brand-blue" placeholder="Nombre de la empresa">
                         </div>
                     </div>
-                    <select class="w-full p-4 border border-gray-200 rounded-xl bg-gray-50 focus:ring-2 focus:ring-brand-blue outline-none font-bold">
-                        <option>Perfil: Sector Hotelero / Deportivo (>500 m³)</option>
-                        <option>Perfil: Promotora Inmobiliaria (LEED/BREEAM)</option>
-                        <option>Perfil: Administración de Fincas / Comunidades</option>
-                    </select>
-                    <button type="button" class="w-full bg-brand-orange text-white py-5 rounded-2xl font-black text-lg hover:bg-brand-dark transition shadow-xl shadow-brand-orange/20">Solicitar Informe Huella de Carbono</button>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Email profesional</label>
+                            <input type="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 outline-none focus:ring-2 focus:ring-brand-blue" placeholder="juan@empresa.com">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Teléfono</label>
+                            <input type="tel" class="w-full px-4 py-3 rounded-lg border border-gray-300 outline-none focus:ring-2 focus:ring-brand-blue" placeholder="+34 XXX XXX XXX">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Consumo de agua aproximado</label>
+                        <select class="w-full px-4 py-3 rounded-lg border border-gray-300 outline-none bg-white font-bold">
+                            <option>Más de 500 m³/día (Segmento Principal[cite: 7, 8])</option>
+                            <option>Promotora: Certificación LEED/BREEAM[cite: 7, 8]</option>
+                            <option>Administrador de Comunidades[cite: 7, 8]</option>
+                        </select>
+                    </div>
+                    <button type="button" class="w-full bg-brand-orange hover:bg-brand-orangelight text-white font-bold py-4 rounded-lg shadow-lg">Solicitar Estudio Gratuito</button>
+                    <p class="text-xs text-center text-gray-500 mt-4 italic">Tus datos están seguros bajo el RGPD. Spin-off ETSIT[cite: 7].</p>
                 </form>
             </div>
         </div>
     </section>
 
-    <!-- Footer Corporativo -->
-    <footer class="bg-black py-20 text-gray-600">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-16 items-center">
-            <div class="text-center md:text-left">
-                <div class="text-3xl font-black text-white mb-4">Hydro-<span class="text-brand-orange">Spark</span></div>
-                <p class="text-sm font-bold">Spin-off nacida en la ETSIT. Ingeniería aplicada al autoconsumo eficiente[cite: 7, 8].</p>
+    <!-- Footer -->
+    <footer class="bg-black py-12 text-gray-500 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-8 text-center md:text-left">
+            <div>
+                <div class="text-2xl font-bold text-white">Hydro-<span class="text-brand-orange">Spark</span></div>
+                <p class="text-xs mt-2 italic font-bold">Engineering for a sustainable flow[cite: 7, 8].</p>
             </div>
-            <div class="flex justify-center gap-8">
-                <a href="https://www.instagram.com/hydro_spark.oficial" target="_blank" class="hover:text-white transition font-black">INSTAGRAM</a>
-                <a href="https://www.tiktok.com/@hydrospark2" target="_blank" class="hover:text-white transition font-black">TIKTOK</a>
-                <a href="#" class="hover:text-white transition font-black">LINKEDIN</a>
+            <div class="flex gap-8 font-black uppercase text-xs">
+                <a href="https://www.instagram.com/hydro_spark.oficial" target="_blank" class="hover:text-white transition">INSTAGRAM</a>
+                <a href="https://www.tiktok.com/@hydrospark2" target="_blank" class="hover:text-white transition">TIKTOK</a>
+                <a href="#" class="hover:text-white transition">LINKEDIN</a>
             </div>
-            <div class="text-center md:text-right space-y-2">
-                <p class="text-xs font-bold">© 2026 Hydro-Spark | Grupo A.2.3</p>
-                <p class="text-xs font-medium">GIFIS - ETSIT | Universidad de Ingeniería Física[cite: 8]</p>
-            </div>
+            <div class="text-xs font-bold uppercase tracking-widest">© 2026 Hydro-Spark | ETSIT GIFIS</div>
         </div>
     </footer>
 
     <script>
-        // Lógica Dinámica de la Calculadora de Ahorro
+        // Lógica de la calculadora dinámica
         const waterInput = document.getElementById('waterInput');
         const waterValue = document.getElementById('waterValue');
         const kwhValue = document.getElementById('kwhValue');
@@ -293,34 +263,32 @@
         waterInput.addEventListener('input', () => {
             const val = waterInput.value;
             waterValue.innerText = val;
-            // Cálculo basado en 800 m3 -> 1000 kWh/mes[cite: 7, 8]
             const kwh = Math.round((val / 800) * 1000);
             kwhValue.innerText = kwh.toLocaleString();
-            // Ahorro anual estimado (kwh * 12 meses * 0.30€/kwh)
             const euros = Math.round(kwh * 12 * 0.30);
             euroValue.innerText = euros.toLocaleString();
         });
 
-        // Gráfico de Ventaja Competitiva: 24/7 vs Solar
+        // Gráfico Ventaja Competitiva: 24/7 vs Solar
         const ctx = document.getElementById('generationChart').getContext('2d');
         new Chart(ctx, {
             type: 'line',
             data: {
                 labels: ['00h', '04h', '08h', '12h', '16h', '20h', '23h'],
                 datasets: [{
-                    label: 'Hydro-Spark (Continuidad)',
+                    label: 'Hydro-Spark (Constante 24/7)',
                     data: [100, 100, 100, 100, 100, 100, 100],
                     borderColor: '#FF6B00',
-                    backgroundColor: 'rgba(255, 107, 0, 0.1)',
-                    borderWidth: 6,
+                    backgroundColor: 'rgba(255,107,0,0.1)',
+                    borderWidth: 5,
                     fill: true,
                     tension: 0
                 }, {
-                    label: 'Solar Fotovoltaica (Intermitente)',
-                    data: [0, 0, 30, 100, 80, 5, 0],
+                    label: 'Solar (Intermitente)',
+                    data: [0, 0, 25, 100, 85, 10, 0],
                     borderColor: '#004A8F',
-                    borderWidth: 4,
-                    borderDash: [10, 10],
+                    borderWidth: 3,
+                    borderDash: [8, 5],
                     tension: 0.4
                 }]
             },
