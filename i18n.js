@@ -510,7 +510,14 @@ function showLegal(type) {
         titleEl.innerHTML = translations[lang]['footer_' + type];
         contentEl.innerHTML = translations[lang]['modal_' + type + '_content'];
         if (downloadBtn) {
-            downloadBtn.href = "pdf/HydroSpark_" + type + "_" + lang + ".pdf";
+            if (type === 'legal' || type === 'privacy') {
+                downloadBtn.href = "pdf/HydroSpark_" + type + "_" + lang + ".pdf";
+                downloadBtn.classList.remove('hidden');
+                downloadBtn.classList.add('inline-flex');
+            } else {
+                downloadBtn.classList.remove('inline-flex');
+                downloadBtn.classList.add('hidden');
+            }
         }
         modal.classList.remove('hidden');
     }
