@@ -409,6 +409,16 @@ function changeLanguage(lang) {
         if (lang === 'val') mainSchematic.src = 'Esquema_VAL.png';
         if (lang === 'en') mainSchematic.src = 'Esquema_EN.png';
     }
+
+    // Lógica para cambiar la imagen de ODS en nosotros.html
+    const odsGraphic = document.getElementById('ods-graphic');
+    if (odsGraphic) {
+        if (lang === 'es' || lang === 'val') {
+            odsGraphic.src = 'ODS_ES.png';
+        } else if (lang === 'en') {
+            odsGraphic.src = 'ODS_EN.png';
+        }
+    }
 }
 
 function applyTranslations(lang) {
