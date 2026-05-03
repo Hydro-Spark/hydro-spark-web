@@ -141,7 +141,8 @@ const translations = {
         chart_solar: "Solar (Intermitente)",
         modal_legal_content: "En cumplimiento de la Ley 34/2002, le informamos que Hydro-Spark es un proyecto de innovación surgido en la ETSIT-UPV. El contenido de esta web tiene fines informativos sobre soluciones de micro-generación hidráulica. Los derechos de propiedad intelectual sobre los esquemas técnicos y logotipos pertenecen a sus autores. Queda prohibida la reproducción total o parcial sin autorización previa.",
         modal_privacy_content: "De acuerdo con el RGPD, los datos personales facilitados a través de nuestro formulario de contacto serán tratados exclusivamente para gestionar su solicitud de estudio de viabilidad energética. Sus datos serán almacenados de forma segura y no serán cedidos a terceros ajenos a la organización. Puede ejercer sus derechos de acceso, rectificación y supresión enviando una comunicación al equipo de soporte.",
-        modal_cookies_content: "Este sitio web utiliza únicamente cookies técnicas esenciales para garantizar el correcto funcionamiento del sistema de cambio de idioma y la persistencia de su sesión. No utilizamos cookies de seguimiento publicitario ni herramientas de análisis de terceros que comprometan su privacidad. Al navegar por este sitio, usted acepta estas cookies operativas necesarias."
+        modal_cookies_content: "Este sitio web utiliza únicamente cookies técnicas esenciales para garantizar el correcto funcionamiento del sistema de cambio de idioma y la persistencia de su sesión. No utilizamos cookies de seguimiento publicitario ni herramientas de análisis de terceros que comprometan su privacidad. Al navegar por este sitio, usted acepta estas cookies operativas necesarias.",
+        modal_download_btn: "Descargar PDF"
     },
     val: {
         nav_about: "Sobre Nosaltres",
@@ -285,7 +286,8 @@ const translations = {
         chart_solar: "Solar (Intermitent)",
         modal_legal_content: "En compliment de la Llei 34/2002, l’informem que Hydro-Spark és un projecte d’innovació sorgit en l’ETSIT-UPV. El contingut d’aquesta web té fins informatius sobre solucions de micro-generació hidràulica. Els drets de propietat intel·lectual sobre els esquemes tècnics i logotips pertanyen als seus autors. Queda prohibida la reproducció total o parcial sense autorització prèvia.",
         modal_privacy_content: "D’acord amb l’RGPD, les dades personals facilitades a través del nostre formulari de contacte seran tractades exclusivament per a gestionar la seua sol·licitud d’estudi de viabilitat energètica. Les seues dades seran emmagatzemades de forma segura i no seran cedides a tercers aliens a l’organització. Pot exercir els seus drets d’accés, rectificació i supressió enviant una comunicació a l’equip de suport.",
-        modal_cookies_content: "Aquest lloc web utilitza únicament galetes tècniques essencials per a garantir el correcte funcionament del sistema de canvi d’idioma i la persistència de la seua sessió. No utilitzem galetes de seguiment publicitari ni eines d’anàlisi de tercers que comprometen la seua privadesa. En navegar per aquest lloc, vostè accepta aquestes galetes operatives necessàries."
+        modal_cookies_content: "Aquest lloc web utilitza únicament galetes tècniques essencials per a garantir el correcte funcionament del sistema de canvi d’idioma i la persistència de la seua sessió. No utilitzem galetes de seguiment publicitari ni eines d’anàlisi de tercers que comprometen la seua privadesa. En navegar per aquest lloc, vostè accepta aquestes galetes operatives necessàries.",
+        modal_download_btn: "Descarregar PDF"
     },
     en: {
         nav_about: "About Us",
@@ -429,7 +431,8 @@ const translations = {
         chart_solar: "Solar (Intermittent)",
         modal_legal_content: "In compliance with Law 34/2002, we inform you that Hydro-Spark is an innovation project born at ETSIT-UPV. The content of this website is for informational purposes regarding micro-hydro generation solutions. Intellectual property rights over technical diagrams and logos belong to their authors. Total or partial reproduction without prior authorization is strictly prohibited.",
         modal_privacy_content: "In accordance with the GDPR, personal data provided through our contact form will be processed exclusively to manage your request for an energy feasibility study. Your data will be stored securely and will not be transferred to third parties outside the organization. You may exercise your rights of access, rectification, and erasure by contacting our support team.",
-        modal_cookies_content: "This website uses only essential technical cookies to ensure the correct functioning of the language switching system and the persistence of your session. We do not use advertising tracking cookies or third-party analytical tools that compromise your privacy. By browsing this site, you accept these necessary operational cookies."
+        modal_cookies_content: "This website uses only essential technical cookies to ensure the correct functioning of the language switching system and the persistence of your session. We do not use advertising tracking cookies or third-party analytical tools that compromise your privacy. By browsing this site, you accept these necessary operational cookies.",
+        modal_download_btn: "Download PDF"
     }
 };
 
@@ -501,10 +504,14 @@ function showLegal(type) {
     const titleEl = document.getElementById('legalModalTitle');
     const contentEl = document.getElementById('legalModalContent');
     const modal = document.getElementById('legalModal');
+    const downloadBtn = document.getElementById('legalDownloadBtn');
     
     if (titleEl && contentEl && modal) {
         titleEl.innerHTML = translations[lang]['footer_' + type];
         contentEl.innerHTML = translations[lang]['modal_' + type + '_content'];
+        if (downloadBtn) {
+            downloadBtn.href = "pdf/HydroSpark_" + type + "_" + lang + ".pdf";
+        }
         modal.classList.remove('hidden');
     }
 }
