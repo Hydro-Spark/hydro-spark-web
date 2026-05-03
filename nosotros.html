@@ -38,11 +38,18 @@
                 <a href="index.html"><span class="text-3xl font-bold text-brand-blue tracking-tight">Hydro-<span class="text-brand-orange">Spark</span></span></a>
             </div>
             <div class="hidden md:flex space-x-8 items-center">
-                <a href="nosotros.html" class="text-gray-600 hover:text-brand-blue transition font-medium">Sobre Nosotros</a>
-                <a href="solucion.html" class="text-gray-600 hover:text-brand-blue transition font-medium">Solución</a>
-                <a href="roi.html" class="text-gray-600 hover:text-brand-blue transition font-medium">Calculadora ROI</a>
-                <a href="subvenciones.html" class="text-gray-600 hover:text-brand-blue transition font-medium">Subvenciones</a>
-                <a href="contacto.html" class="bg-brand-orange hover:bg-brand-orangelight text-white px-6 py-2.5 rounded-full font-semibold transition shadow-lg">Contactar</a>
+                <a href="nosotros.html" class="text-gray-600 hover:text-brand-blue transition font-medium" data-i18n="nav_about">Sobre Nosotros</a>
+                <a href="solucion.html" class="text-gray-600 hover:text-brand-blue transition font-medium" data-i18n="nav_solution">Solución</a>
+                <a href="roi.html" class="text-gray-600 hover:text-brand-blue transition font-medium" data-i18n="nav_roi">Calculadora ROI</a>
+                <a href="subvenciones.html" class="text-gray-600 hover:text-brand-blue transition font-medium" data-i18n="nav_subsidies">Subvenciones</a>
+                <a href="contacto.html" class="bg-brand-orange hover:bg-brand-orangelight text-white px-6 py-2.5 rounded-full font-semibold transition shadow-lg" data-i18n="nav_contact">Contactar</a>
+                
+                <!-- Language Selector -->
+                <div class="flex space-x-3 ml-2 border-l pl-5 border-gray-300">
+                    <button onclick="changeLanguage('es')" class="text-xs font-bold text-gray-500 hover:text-brand-orange transition">ES</button>
+                    <button onclick="changeLanguage('val')" class="text-xs font-bold text-gray-500 hover:text-brand-orange transition">VAL</button>
+                    <button onclick="changeLanguage('en')" class="text-xs font-bold text-gray-500 hover:text-brand-orange transition">EN</button>
+                </div>
             </div>
         </div>
     </nav>
@@ -65,7 +72,7 @@
     <section class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold text-brand-dark">Nuestro Equipo Directivo</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-dark" data-i18n="team_title">Nuestro Equipo Directivo</h2>
             </div>
             <div class="grid md:grid-cols-4 gap-8">
                 <!-- CEO -->
@@ -96,33 +103,33 @@
     <section class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-16">Nuestro Compromiso con la Agenda 2030 (ODS)</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-16" data-i18n="ods_title">Nuestro Compromiso con la Agenda 2030 (ODS)</h2>
                 <img src="CABECERA-CIRCULO-ODS.png" alt="Compromiso Agenda 2030" class="mx-auto block w-full max-w-2xl h-auto rounded-full shadow-2xl border-8 border-white mb-16 transform hover:scale-105 transition duration-500">
             </div>
             <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <!-- ODS 7 -->
                 <div class="bg-gray-50 p-6 rounded-2xl shadow-md border-t-8 border-brand-orange">
                     <h3 class="font-black text-2xl text-brand-orange mb-2">ODS 7</h3>
-                    <h4 class="font-bold text-lg text-brand-dark mb-3 leading-tight">Energía Asequible y No Contaminante</h4>
-                    <p class="text-gray-600 text-sm">Generación continua 24/7 de hasta 1.000 kWh mensuales aprovechando flujos hídricos residuales.</p>
+                    <h4 class="font-bold text-lg text-brand-dark mb-3 leading-tight" data-i18n="ods_7_title">Energía Asequible y No Contaminante</h4>
+                    <p class="text-gray-600 text-sm" data-i18n="ods_7_desc">Generación continua 24/7 de hasta 1.000 kWh mensuales aprovechando flujos hídricos residuales.</p>
                 </div>
                 <!-- ODS 9 -->
                 <div class="bg-gray-50 p-6 rounded-2xl shadow-md border-t-8 border-brand-blue">
                     <h3 class="font-black text-2xl text-brand-blue mb-2">ODS 9</h3>
-                    <h4 class="font-bold text-lg text-brand-dark mb-3 leading-tight">Industria, Innovación e Infraestructura</h4>
-                    <p class="text-gray-600 text-sm">Innovación nacida en la ETSIT para integrar energía renovable en infraestructuras ya existentes sin impacto visual.</p>
+                    <h4 class="font-bold text-lg text-brand-dark mb-3 leading-tight" data-i18n="ods_9_title">Industria, Innovación e Infraestructura</h4>
+                    <p class="text-gray-600 text-sm" data-i18n="ods_9_desc">Innovación nacida en la ETSIT para integrar energía renovable en infraestructuras ya existentes sin impacto visual.</p>
                 </div>
                 <!-- ODS 11 -->
                 <div class="bg-gray-50 p-6 rounded-2xl shadow-md border-t-8 border-brand-orange">
                     <h3 class="font-black text-2xl text-brand-orange mb-2">ODS 11</h3>
-                    <h4 class="font-bold text-lg text-brand-dark mb-3 leading-tight">Ciudades y Comunidades Sostenibles</h4>
-                    <p class="text-gray-600 text-sm">Transformación de edificios y complejos industriales en activos hídricos eficientes y autónomos.</p>
+                    <h4 class="font-bold text-lg text-brand-dark mb-3 leading-tight" data-i18n="ods_11_title">Ciudades y Comunidades Sostenibles</h4>
+                    <p class="text-gray-600 text-sm" data-i18n="ods_11_desc">Transformación de edificios y complejos industriales en activos hídricos eficientes y autónomos.</p>
                 </div>
                 <!-- ODS 13 -->
                 <div class="bg-gray-50 p-6 rounded-2xl shadow-md border-t-8 border-brand-blue">
                     <h3 class="font-black text-2xl text-brand-blue mb-2">ODS 13</h3>
-                    <h4 class="font-bold text-lg text-brand-dark mb-3 leading-tight">Acción por el Clima</h4>
-                    <p class="text-gray-600 text-sm">Reducción directa de 3,5 toneladas de CO2 anuales por cada unidad instalada, impulsando la descarbonización.</p>
+                    <h4 class="font-bold text-lg text-brand-dark mb-3 leading-tight" data-i18n="ods_13_title">Acción por el Clima</h4>
+                    <p class="text-gray-600 text-sm" data-i18n="ods_13_desc">Reducción directa de 3,5 toneladas de CO2 anuales por cada unidad instalada, impulsando la descarbonización.</p>
                 </div>
             </div>
         </div>
@@ -153,5 +160,6 @@
             </div>
         </div>
     </footer>
+    <script src="i18n.js"></script>
 </body>
 </html>
