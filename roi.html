@@ -46,9 +46,9 @@
                 
                 <!-- Language Selector -->
                 <div class="flex space-x-3 ml-2 border-l pl-5 border-gray-300">
-                    <button onclick="changeLanguage('es')" class="text-xs font-bold text-gray-500 hover:text-brand-orange transition">ES</button>
-                    <button onclick="changeLanguage('val')" class="text-xs font-bold text-gray-500 hover:text-brand-orange transition">VAL</button>
-                    <button onclick="changeLanguage('en')" class="text-xs font-bold text-gray-500 hover:text-brand-orange transition">EN</button>
+                    <button onclick="changeLanguage('es')" data-lang-btn="es" class="text-xs font-bold text-gray-500 hover:text-brand-orange transition">ES</button>
+                    <button onclick="changeLanguage('val')" data-lang-btn="val" class="text-xs font-bold text-gray-500 hover:text-brand-orange transition">VAL</button>
+                    <button onclick="changeLanguage('en')" data-lang-btn="en" class="text-xs font-bold text-gray-500 hover:text-brand-orange transition">EN</button>
                 </div>
             </div>
         </div>
@@ -57,42 +57,42 @@
     <!-- Calculadora de ROI (Lógica Real) -->
     <section id="roi" class="py-32 bg-white min-h-screen">
         <div class="max-w-4xl mx-auto px-4 bg-gray-900 rounded-[3rem] p-10 text-white relative shadow-2xl">
-            <div class="absolute top-0 right-10 -mt-8 bg-brand-orange px-6 py-2 rounded-xl font-bold shadow-lg">Amortización ~2.5 años</div>
-            <h2 class="text-3xl font-bold text-center mb-10">Simulador de Impacto Financiero</h2>
+            <div class="absolute top-0 right-10 -mt-8 bg-brand-orange px-6 py-2 rounded-xl font-bold shadow-lg" data-i18n="roi_amort">Amortización ~2.5 años</div>
+            <h2 class="text-3xl font-bold text-center mb-10" data-i18n="roi_title">Simulador de Impacto Financiero</h2>
             <div class="grid md:grid-cols-2 gap-12">
                 <div class="space-y-12">
                     <div>
-                        <label class="block text-sm font-bold text-gray-400 uppercase tracking-widest mb-4">Consumo Diario (m³/día)</label>
+                        <label class="block text-sm font-bold text-gray-400 uppercase tracking-widest mb-4" data-i18n="roi_input_label">Consumo Diario (m³/día)</label>
                         <input type="range" id="waterInput" min="100" max="2500" value="800" class="w-full h-3 bg-white/10 rounded-lg appearance-none cursor-pointer accent-brand-orange">
                         <div class="text-5xl font-black text-white mt-4"><span id="waterValue">800</span> m³</div>
                     </div>
-                    <div class="p-4 bg-white/5 rounded-xl border border-white/10 text-sm italic">"Rentable para consumos mayores a 500 m³/día".</div>
+                    <div class="p-4 bg-white/5 rounded-xl border border-white/10 text-sm italic" data-i18n="roi_hint">"Rentable para consumos mayores a 500 m³/día".</div>
                 </div>
                 <div class="space-y-6 text-center md:text-left">
                     <div class="bg-brand-blue/30 p-6 rounded-2xl border border-white/10">
-                        <div class="text-xs uppercase font-bold opacity-60">Generación Mensual Est.</div>
+                        <div class="text-xs uppercase font-bold opacity-60" data-i18n="roi_monthly_gen">Generación Mensual Est.</div>
                         <div class="text-4xl font-bold"><span id="kwhValue">1.000</span> kWh</div>
                     </div>
                     <div class="bg-brand-orange/30 p-6 rounded-2xl border border-white/10">
-                        <div class="text-xs uppercase font-bold opacity-60">Ahorro Anual Estimado</div>
+                        <div class="text-xs uppercase font-bold opacity-60" data-i18n="roi_annual_sav">Ahorro Anual Estimado</div>
                         <div class="text-4xl font-bold">€ <span id="euroValue">3.600</span></div>
                     </div>
-                    <p class="text-[10px] text-gray-500 leading-tight">Cálculo basado en 0,30€/kWh y generación continua 24/7.</p>
+                    <p class="text-[10px] text-gray-500 leading-tight" data-i18n="roi_calc_note">Cálculo basado en 0,30€/kWh y generación continua 24/7.</p>
                 </div>
             </div>
         </div>
         
         <!-- ¿Cómo calculamos tu ahorro? -->
         <div class="max-w-5xl mx-auto px-4 mt-20">
-            <h3 class="text-2xl font-bold text-center text-brand-dark mb-10">¿Cómo calculamos tu ahorro?</h3>
+            <h3 class="text-2xl font-bold text-center text-brand-dark mb-10" data-i18n="roi_how_title">¿Cómo calculamos tu ahorro?</h3>
             <div class="grid md:grid-cols-2 gap-10">
                 <div class="bg-gray-50 p-8 rounded-2xl shadow-md border-t-4 border-brand-blue">
-                    <h4 class="text-xl font-bold text-brand-dark mb-4">Variables Técnicas</h4>
-                    <p class="text-gray-600 leading-relaxed">El retorno de ~2.5 años se basa en la constancia del flujo hídrico, la presión nominal de la red y la volatilidad del mercado eléctrico OMIE.</p>
+                    <h4 class="text-xl font-bold text-brand-dark mb-4" data-i18n="roi_tech_title">Variables Técnicas</h4>
+                    <p class="text-gray-600 leading-relaxed" data-i18n="roi_tech_desc">El retorno de ~2.5 años se basa en la constancia del flujo hídrico, la presión nominal de la red y la volatilidad del mercado eléctrico OMIE.</p>
                 </div>
                 <div class="bg-gray-50 p-8 rounded-2xl shadow-md border-t-4 border-brand-orange">
-                    <h4 class="text-xl font-bold text-brand-dark mb-4">Impacto Ambiental</h4>
-                    <p class="text-gray-600 leading-relaxed">1.000 kWh/mes equivalen a evitar la emisión de 3.5 toneladas de CO2 anuales, acelerando la obtención de sellos LEED.</p>
+                    <h4 class="text-xl font-bold text-brand-dark mb-4" data-i18n="roi_env_title">Impacto Ambiental</h4>
+                    <p class="text-gray-600 leading-relaxed" data-i18n="roi_env_desc">1.000 kWh/mes equivalen a evitar la emisión de 3.5 toneladas de CO2 anuales, acelerando la obtención de sellos LEED.</p>
                 </div>
             </div>
         </div>

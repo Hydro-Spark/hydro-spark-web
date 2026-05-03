@@ -46,9 +46,9 @@
                 
                 <!-- Language Selector -->
                 <div class="flex space-x-3 ml-2 border-l pl-5 border-gray-300">
-                    <button onclick="changeLanguage('es')" class="text-xs font-bold text-gray-500 hover:text-brand-orange transition">ES</button>
-                    <button onclick="changeLanguage('val')" class="text-xs font-bold text-gray-500 hover:text-brand-orange transition">VAL</button>
-                    <button onclick="changeLanguage('en')" class="text-xs font-bold text-gray-500 hover:text-brand-orange transition">EN</button>
+                    <button onclick="changeLanguage('es')" data-lang-btn="es" class="text-xs font-bold text-gray-500 hover:text-brand-orange transition">ES</button>
+                    <button onclick="changeLanguage('val')" data-lang-btn="val" class="text-xs font-bold text-gray-500 hover:text-brand-orange transition">VAL</button>
+                    <button onclick="changeLanguage('en')" data-lang-btn="en" class="text-xs font-bold text-gray-500 hover:text-brand-orange transition">EN</button>
                 </div>
             </div>
         </div>
@@ -85,19 +85,7 @@
         <div class="max-w-7xl mx-auto px-4 text-center">
             <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-12">Esquema Técnico de Integración</h2>
             <div class="relative inline-block max-w-5xl w-full">
-                <img src="Esquema_producto_sinTexto.png" alt="Esquema Técnico de Integración" class="mx-auto rounded-3xl shadow-2xl border border-gray-100 w-full">
-                
-                <!-- Etiquetas Interactivas i18n -->
-                <div class="absolute top-[12%] left-[10%] bg-white/95 px-3 py-1.5 rounded-lg shadow-md text-xs font-bold border-l-4 border-brand-orange text-brand-dark" data-i18n="label_valve">Válvula Bypass Inteligente</div>
-                <div class="absolute top-[35%] left-[5%] bg-white/95 px-3 py-1.5 rounded-lg shadow-md text-xs font-bold border-l-4 border-brand-orange text-brand-dark" data-i18n="label_loop">Bucle Bypass</div>
-                <div class="absolute bottom-[10%] left-[8%] bg-white/95 px-3 py-1.5 rounded-lg shadow-md text-xs font-bold border-l-4 border-brand-blue text-brand-dark" data-i18n="label_pipe">Tubería Principal (DN600)</div>
-                <div class="absolute bottom-[20%] left-[30%] bg-white/95 px-3 py-1.5 rounded-lg shadow-md text-xs font-bold text-gray-700" data-i18n="label_flow">Dirección del Flujo</div>
-                <div class="absolute top-[45%] left-[35%] bg-white/95 px-3 py-1.5 rounded-lg shadow-md text-xs font-bold border-l-4 border-brand-blue text-brand-dark" data-i18n="label_pressure">Sensor de Presión</div>
-                <div class="absolute top-[55%] left-[45%] bg-white/95 px-3 py-1.5 rounded-lg shadow-md text-xs font-bold border-l-4 border-brand-blue text-brand-dark" data-i18n="label_flow_sensor">Sensor de Caudal</div>
-                <div class="absolute top-[25%] left-[55%] bg-white/95 px-3 py-1.5 rounded-lg shadow-md text-xs font-bold border-l-4 border-brand-orange text-brand-dark" data-i18n="label_turbine">Microturbina Hydro-Spark</div>
-                <div class="absolute top-[5%] left-[65%] bg-white/95 px-3 py-1.5 rounded-lg shadow-md text-xs font-bold border-l-4 border-brand-orange text-brand-dark" data-i18n="label_iot">Sensor IoT</div>
-                <div class="absolute top-[35%] left-[75%] bg-white/95 px-3 py-1.5 rounded-lg shadow-md text-xs font-bold border-l-4 border-brand-blue text-brand-dark" data-i18n="label_rotor">Rotor y Generador</div>
-                <div class="absolute top-[65%] left-[80%] bg-white/95 px-3 py-1.5 rounded-lg shadow-md text-xs font-bold border-l-4 border-brand-blue text-brand-dark" data-i18n="label_grid">Conexión a Red</div>
+                <img id="main-schematic" src="Esquema_ES.png" alt="Esquema Técnico de Integración" class="mx-auto rounded-3xl shadow-2xl border border-gray-100 w-full">
             </div>
             <p class="text-gray-600 mt-6 max-w-4xl mx-auto italic">Visualización de la integración en línea con bypass inteligente, diseñada bajo estándares del Código Técnico de la Edificación (CTE HS 4)</p>
         </div>
