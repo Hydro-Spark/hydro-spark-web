@@ -129,7 +129,16 @@ const translations = {
         roi_tech_title: "Variables Técnicas",
         roi_tech_desc: "El retorno de ~2.5 años se basa en la constancia del flujo hídrico, la presión nominal de la red y la volatilidad del mercado eléctrico OMIE.",
         roi_env_title: "Impacto Ambiental",
-        roi_env_desc: "1.000 kWh/mes equivalen a evitar la emisión de 3.5 toneladas de CO2 anuales, acelerando la obtención de sellos LEED."
+        roi_env_desc: "1.000 kWh/mes equivalen a evitar la emisión de 3.5 toneladas de CO2 anuales, acelerando la obtención de sellos LEED.",
+
+        // --- FOOTER & GRAFICA ---
+        footer_slogan: "Engineering for a sustainable flow.",
+        footer_legal: "Aviso Legal",
+        footer_privacy: "Política de Privacidad",
+        footer_cookies: "Política de Cookies",
+        footer_rgpd: "Protección de datos conforme al RGPD",
+        chart_hydro: "Hydro-Spark (Constante 24/7)",
+        chart_solar: "Solar (Intermitente)"
     },
     val: {
         nav_about: "Sobre Nosaltres",
@@ -261,7 +270,16 @@ const translations = {
         roi_tech_title: "Variables Tècniques",
         roi_tech_desc: "El retorn de ~2.5 anys es basa en la constància del flux hídric, la pressió nominal de la xarxa i la volatilitat del mercat elèctric OMIE.",
         roi_env_title: "Impacte Ambiental",
-        roi_env_desc: "1.000 kWh/mes equivalen a evitar l'emissió de 3.5 tones de CO2 anuals, accelerant l'obtenció de segells LEED."
+        roi_env_desc: "1.000 kWh/mes equivalen a evitar l'emissió de 3.5 tones de CO2 anuals, accelerant l'obtenció de segells LEED.",
+
+        // --- FOOTER & GRAFICA ---
+        footer_slogan: "Enginyeria per a un flux sostenible.",
+        footer_legal: "Avís Legal",
+        footer_privacy: "Política de Privacitat",
+        footer_cookies: "Política de Galetes",
+        footer_rgpd: "Protecció de dades d'acord amb l'RGPD",
+        chart_hydro: "Hydro-Spark (Constant 24/7)",
+        chart_solar: "Solar (Intermitent)"
     },
     en: {
         nav_about: "About Us",
@@ -393,7 +411,16 @@ const translations = {
         roi_tech_title: "Technical Variables",
         roi_tech_desc: "The return of ~2.5 years is based on the consistency of the water flow, the nominal pressure of the grid, and the volatility of the OMIE electricity market.",
         roi_env_title: "Environmental Impact",
-        roi_env_desc: "1,000 kWh/month is equivalent to avoiding the emission of 3.5 tons of CO2 annually, accelerating the achievement of LEED certifications."
+        roi_env_desc: "1,000 kWh/month is equivalent to avoiding the emission of 3.5 tons of CO2 annually, accelerating the achievement of LEED certifications.",
+
+        // --- FOOTER & GRAFICA ---
+        footer_slogan: "Engineering for a sustainable flow.",
+        footer_legal: "Legal Notice",
+        footer_privacy: "Privacy Policy",
+        footer_cookies: "Cookies Policy",
+        footer_rgpd: "Data protection according to GDPR",
+        chart_hydro: "Hydro-Spark (Constant 24/7)",
+        chart_solar: "Solar (Intermittent)"
     }
 };
 
@@ -418,6 +445,13 @@ function changeLanguage(lang) {
         } else if (lang === 'en') {
             odsGraphic.src = 'ODS_EN.png';
         }
+    }
+
+    // Lógica para actualizar la gráfica en solucion.html
+    if (window.generationChart) {
+        window.generationChart.data.datasets[0].label = translations[lang]['chart_hydro'];
+        window.generationChart.data.datasets[1].label = translations[lang]['chart_solar'];
+        window.generationChart.update();
     }
 }
 
