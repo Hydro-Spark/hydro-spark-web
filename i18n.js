@@ -138,7 +138,10 @@ const translations = {
         footer_cookies: "Política de Cookies",
         footer_rgpd: "Protección de datos conforme al RGPD",
         chart_hydro: "Hydro-Spark (Constante 24/7)",
-        chart_solar: "Solar (Intermitente)"
+        chart_solar: "Solar (Intermitente)",
+        modal_legal_content: "Hydro-Spark SL. CIF: B12345678. Domicilio: ETSIT - UPV, Valencia. Esta web tiene carácter informativo sobre soluciones de micro-generación hidráulica.",
+        modal_privacy_content: "Los datos recogidos en el formulario se tratan conforme al RGPD para gestionar su solicitud de estudio de viabilidad. No se cederán a terceros.",
+        modal_cookies_content: "Utilizamos cookies técnicas necesarias para el funcionamiento del sitio y el cambio de idioma. No rastreamos datos personales."
     },
     val: {
         nav_about: "Sobre Nosaltres",
@@ -279,7 +282,10 @@ const translations = {
         footer_cookies: "Política de Galetes",
         footer_rgpd: "Protecció de dades d'acord amb l'RGPD",
         chart_hydro: "Hydro-Spark (Constant 24/7)",
-        chart_solar: "Solar (Intermitent)"
+        chart_solar: "Solar (Intermitent)",
+        modal_legal_content: "Hydro-Spark SL. CIF: B12345678. Domicili: ETSIT - UPV, València. Aquesta web té caràcter informatiu sobre solucions de micro-generació hidràulica.",
+        modal_privacy_content: "Les dades recollides en el formulari es tracten d'acord amb l'RGPD per gestionar la seva sol·licitud d'estudi de viabilitat. No se cediran a tercers.",
+        modal_cookies_content: "Utilitzem cookies tècniques necessàries per al funcionament del lloc i el canvi d'idioma. No rastregem dades personals."
     },
     en: {
         nav_about: "About Us",
@@ -420,7 +426,10 @@ const translations = {
         footer_cookies: "Cookies Policy",
         footer_rgpd: "Data protection according to GDPR",
         chart_hydro: "Hydro-Spark (Constant 24/7)",
-        chart_solar: "Solar (Intermittent)"
+        chart_solar: "Solar (Intermittent)",
+        modal_legal_content: "Hydro-Spark SL. VAT: B12345678. Address: ETSIT - UPV, Valencia. This website is for informational purposes regarding micro-hydro generation solutions.",
+        modal_privacy_content: "The data collected in the form is processed in accordance with the GDPR to manage your feasibility study request. It will not be shared with third parties.",
+        modal_cookies_content: "We use necessary technical cookies for site operation and language switching. We do not track personal data."
     }
 };
 
@@ -486,3 +495,24 @@ window.onload = () => {
     const savedLang = localStorage.getItem('selectedLanguage') || 'es';
     changeLanguage(savedLang);
 };
+
+function showLegal(type) {
+    const lang = localStorage.getItem('selectedLanguage') || 'es';
+    const titleEl = document.getElementById('legalModalTitle');
+    const contentEl = document.getElementById('legalModalContent');
+    const modal = document.getElementById('legalModal');
+    
+    if (titleEl && contentEl && modal) {
+        titleEl.innerHTML = translations[lang]['footer_' + type];
+        contentEl.innerHTML = translations[lang]['modal_' + type + '_content'];
+        modal.classList.remove('hidden');
+    }
+}
+
+// Cerrar modal al hacer clic fuera
+window.addEventListener('click', function(e) {
+    const modal = document.getElementById('legalModal');
+    if (modal && e.target === modal) {
+        modal.classList.add('hidden');
+    }
+});
