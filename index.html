@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hydro-Spark | Energía limpia 24/7</title>
+    <link rel="icon" type="image/png" href="logo-final.png">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         tailwind.config = {
@@ -46,9 +48,9 @@
                 
                 <!-- Language Selector -->
                 <div class="flex space-x-6 ml-2 border-l pl-5 border-gray-300">
-                    <button onclick="changeLanguage('es')" data-lang-btn="es" class="flex items-center text-xs font-bold text-gray-500 hover:text-brand-orange transition-all duration-200 transform hover:scale-110"><img src="flag_es.png" class="w-5 h-auto inline-block mr-1.5 rounded-sm shadow-sm" alt="ES">ES</button>
-                    <button onclick="changeLanguage('val')" data-lang-btn="val" class="flex items-center text-xs font-bold text-gray-500 hover:text-brand-orange transition-all duration-200 transform hover:scale-110"><img src="flag_val.png" class="w-5 h-auto inline-block mr-1.5 rounded-sm shadow-sm" alt="VAL">VAL</button>
-                    <button onclick="changeLanguage('en')" data-lang-btn="en" class="flex items-center text-xs font-bold text-gray-500 hover:text-brand-orange transition-all duration-200 transform hover:scale-110"><img src="flag_en.png?v=2" class="w-6 h-auto inline-block mr-1.5 rounded-sm shadow-sm" alt="EN">EN</button>
+                    <button aria-label="Seleccionar idioma Español" onclick="changeLanguage('es')" data-lang-btn="es" class="flex items-center text-xs font-bold text-gray-500 hover:text-brand-orange transition-all duration-200 transform hover:scale-110"><img src="flag_es.png" class="w-5 h-auto inline-block mr-1.5 rounded-sm shadow-sm" alt="">ES</button>
+                    <button aria-label="Seleccionar idioma Valenciano" onclick="changeLanguage('val')" data-lang-btn="val" class="flex items-center text-xs font-bold text-gray-500 hover:text-brand-orange transition-all duration-200 transform hover:scale-110"><img src="flag_val.png" class="w-5 h-auto inline-block mr-1.5 rounded-sm shadow-sm" alt="">VAL</button>
+                    <button aria-label="Seleccionar idioma Inglés" onclick="changeLanguage('en')" data-lang-btn="en" class="flex items-center text-xs font-bold text-gray-500 hover:text-brand-orange transition-all duration-200 transform hover:scale-110"><img src="flag_en.png?v=2" class="w-6 h-auto inline-block mr-1.5 rounded-sm shadow-sm" alt="">EN</button>
                 </div>
             </div>
         </div>
@@ -57,7 +59,7 @@
     <main class="flex-grow">
     <!-- Hero Section -->
     <section class="relative pt-32 pb-20 lg:pt-48 lg:pb-32 overflow-hidden bg-gradient-to-br from-brand-dark to-brand-blue text-white text-center lg:text-left">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center" data-aos="fade-up">
             <div class="lg:w-1/2">
                 <span class="inline-block py-1 px-3 rounded-full bg-brand-orange/20 text-brand-orange font-semibold text-sm mb-6 border border-brand-orange/30" data-i18n="hero_badge">Spin-off ETSIT | Grupo A.2.3</span>
                 <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight" data-i18n="hero_title">Tu agua, tu energía, <span class="text-brand-orange">tu impacto.</span></h1>
@@ -69,6 +71,18 @@
             </div>
             <div class="lg:w-1/2 mt-16 lg:mt-0 flex justify-center">
                 <img src="logo-final.png" alt="Logo" class="w-80 md:w-[500px] h-auto drop-shadow-2xl">
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section -->
+    <section class="bg-white py-12" data-aos="fade-up">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-xl font-bold text-gray-500 mb-8 uppercase tracking-widest" data-i18n="partners_title"></h2>
+            <div class="flex flex-wrap justify-center items-center gap-12 md:gap-24">
+                <img src="logo_upv.png" alt="UPV" class="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition duration-300">
+                <img src="logo_etsit.png" alt="ETSIT" class="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition duration-300">
+                <img src="logo_gifis.png" alt="GIFIS" class="h-12 md:h-16 object-contain grayscale hover:grayscale-0 transition duration-300">
             </div>
         </div>
     </section>
@@ -112,6 +126,8 @@
         </div>
     </div>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ once: true, duration: 800, offset: 100 });</script>
     <script src="i18n.js"></script>
 </body>
 </html>

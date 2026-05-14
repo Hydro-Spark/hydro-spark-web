@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hydro-Spark | Energía limpia 24/7</title>
+    <link rel="icon" type="image/png" href="logo-final.png">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         tailwind.config = {
@@ -46,9 +48,9 @@
                 
                 <!-- Language Selector -->
                 <div class="flex space-x-6 ml-2 border-l pl-5 border-gray-300">
-                    <button onclick="changeLanguage('es')" data-lang-btn="es" class="flex items-center text-xs font-bold text-gray-500 hover:text-brand-orange transition-all duration-200 transform hover:scale-110"><img src="flag_es.png" class="w-5 h-auto inline-block mr-1.5 rounded-sm shadow-sm" alt="ES">ES</button>
-                    <button onclick="changeLanguage('val')" data-lang-btn="val" class="flex items-center text-xs font-bold text-gray-500 hover:text-brand-orange transition-all duration-200 transform hover:scale-110"><img src="flag_val.png" class="w-5 h-auto inline-block mr-1.5 rounded-sm shadow-sm" alt="VAL">VAL</button>
-                    <button onclick="changeLanguage('en')" data-lang-btn="en" class="flex items-center text-xs font-bold text-gray-500 hover:text-brand-orange transition-all duration-200 transform hover:scale-110"><img src="flag_en.png?v=2" class="w-6 h-auto inline-block mr-1.5 rounded-sm shadow-sm" alt="EN">EN</button>
+                    <button aria-label="Seleccionar idioma Español" onclick="changeLanguage('es')" data-lang-btn="es" class="flex items-center text-xs font-bold text-gray-500 hover:text-brand-orange transition-all duration-200 transform hover:scale-110"><img src="flag_es.png" class="w-5 h-auto inline-block mr-1.5 rounded-sm shadow-sm" alt="">ES</button>
+                    <button aria-label="Seleccionar idioma Valenciano" onclick="changeLanguage('val')" data-lang-btn="val" class="flex items-center text-xs font-bold text-gray-500 hover:text-brand-orange transition-all duration-200 transform hover:scale-110"><img src="flag_val.png" class="w-5 h-auto inline-block mr-1.5 rounded-sm shadow-sm" alt="">VAL</button>
+                    <button aria-label="Seleccionar idioma Inglés" onclick="changeLanguage('en')" data-lang-btn="en" class="flex items-center text-xs font-bold text-gray-500 hover:text-brand-orange transition-all duration-200 transform hover:scale-110"><img src="flag_en.png?v=2" class="w-6 h-auto inline-block mr-1.5 rounded-sm shadow-sm" alt="">EN</button>
                 </div>
             </div>
         </div>
@@ -74,7 +76,7 @@
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold text-brand-dark" data-i18n="team_title">Nuestro Equipo Directivo</h2>
             </div>
-            <div class="grid md:grid-cols-4 gap-8">
+            <div class="grid md:grid-cols-4 gap-8" data-aos="fade-up">
                 <!-- CEO -->
                 <div class="bg-white p-6 rounded-2xl shadow-lg border-t-4 border-brand-blue text-center">
                     <h3 class="font-bold text-lg text-brand-dark mb-2" data-i18n="team_ceo_title">Dirección General (CEO)</h3>
@@ -106,7 +108,7 @@
                 <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-16" data-i18n="ods_title">Nuestro Compromiso con la Agenda 2030 (ODS)</h2>
                 <img id="ods-graphic" src="ODS_ES.png" alt="Compromiso Agenda 2030" class="mx-auto block w-full max-w-2xl aspect-square object-cover rounded-full shadow-2xl border-8 border-white mb-16 transform hover:scale-105 transition duration-500">
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8" data-aos="fade-up">
                 <!-- ODS 7 -->
                 <div class="bg-gray-50 p-6 rounded-2xl shadow-md border-t-8 border-brand-orange">
                     <h3 class="font-black text-2xl text-brand-orange mb-2">ODS 7</h3>
@@ -173,6 +175,8 @@
         </div>
     </div>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ once: true, duration: 800, offset: 100 });</script>
     <script src="i18n.js"></script>
 </body>
 </html>

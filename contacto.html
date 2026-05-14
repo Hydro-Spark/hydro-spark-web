@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hydro-Spark | Energía limpia 24/7</title>
+    <link rel="icon" type="image/png" href="logo-final.png">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         tailwind.config = {
@@ -46,9 +48,9 @@
                 
                 <!-- Language Selector -->
                 <div class="flex space-x-6 ml-2 border-l pl-5 border-gray-300">
-                    <button onclick="changeLanguage('es')" data-lang-btn="es" class="flex items-center text-xs font-bold text-gray-500 hover:text-brand-orange transition-all duration-200 transform hover:scale-110"><img src="flag_es.png" class="w-5 h-auto inline-block mr-1.5 rounded-sm shadow-sm" alt="ES">ES</button>
-                    <button onclick="changeLanguage('val')" data-lang-btn="val" class="flex items-center text-xs font-bold text-gray-500 hover:text-brand-orange transition-all duration-200 transform hover:scale-110"><img src="flag_val.png" class="w-5 h-auto inline-block mr-1.5 rounded-sm shadow-sm" alt="VAL">VAL</button>
-                    <button onclick="changeLanguage('en')" data-lang-btn="en" class="flex items-center text-xs font-bold text-gray-500 hover:text-brand-orange transition-all duration-200 transform hover:scale-110"><img src="flag_en.png?v=2" class="w-6 h-auto inline-block mr-1.5 rounded-sm shadow-sm" alt="EN">EN</button>
+                    <button aria-label="Seleccionar idioma Español" onclick="changeLanguage('es')" data-lang-btn="es" class="flex items-center text-xs font-bold text-gray-500 hover:text-brand-orange transition-all duration-200 transform hover:scale-110"><img src="flag_es.png" class="w-5 h-auto inline-block mr-1.5 rounded-sm shadow-sm" alt="">ES</button>
+                    <button aria-label="Seleccionar idioma Valenciano" onclick="changeLanguage('val')" data-lang-btn="val" class="flex items-center text-xs font-bold text-gray-500 hover:text-brand-orange transition-all duration-200 transform hover:scale-110"><img src="flag_val.png" class="w-5 h-auto inline-block mr-1.5 rounded-sm shadow-sm" alt="">VAL</button>
+                    <button aria-label="Seleccionar idioma Inglés" onclick="changeLanguage('en')" data-lang-btn="en" class="flex items-center text-xs font-bold text-gray-500 hover:text-brand-orange transition-all duration-200 transform hover:scale-110"><img src="flag_en.png?v=2" class="w-6 h-auto inline-block mr-1.5 rounded-sm shadow-sm" alt="">EN</button>
                 </div>
             </div>
         </div>
@@ -57,11 +59,11 @@
     <!-- Contacto (Restaurado Estilo Original) -->
     <section id="contact" class="py-24 bg-gray-900 text-white relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="text-center max-w-3xl mx-auto mb-16">
+            <div class="text-center max-w-3xl mx-auto mb-16" data-aos="fade-up">
                 <h2 class="text-3xl md:text-4xl font-bold mb-6 tracking-tighter" data-i18n="contact_title">Empieza a Ahorrar Hoy</h2>
                 <p class="text-xl text-gray-400 leading-relaxed" data-i18n="contact_desc">Especializados en complejos hoteleros y plantas industriales. Solicita un estudio de viabilidad sin compromiso.</p>
             </div>
-            <div class="max-w-2xl mx-auto bg-white rounded-2xl p-8 shadow-2xl text-gray-900">
+            <div class="max-w-2xl mx-auto bg-white rounded-2xl p-8 shadow-2xl text-gray-900" data-aos="fade-up">
                 <form class="space-y-6">
                     <div class="grid md:grid-cols-2 gap-6">
                         <div>
@@ -97,7 +99,7 @@
             </div>
 
             <!-- FAQ -->
-            <div class="max-w-3xl mx-auto mt-20">
+            <div class="max-w-3xl mx-auto mt-20" data-aos="fade-up">
                 <h3 class="text-2xl font-bold mb-8 text-center" data-i18n="contact_faq_title">Preguntas Frecuentes Técnicas (FAQ)</h3>
                 <div class="space-y-6">
                     <div class="bg-gray-800 p-6 rounded-2xl border border-gray-700">
@@ -155,6 +157,8 @@
         </div>
     </div>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ once: true, duration: 800, offset: 100 });</script>
     <script src="i18n.js"></script>
 </body>
 </html>

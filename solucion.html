@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hydro-Spark | Energía limpia 24/7</title>
+    <link rel="icon" type="image/png" href="logo-final.png">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         tailwind.config = {
@@ -46,9 +48,9 @@
                 
                 <!-- Language Selector -->
                 <div class="flex space-x-6 ml-2 border-l pl-5 border-gray-300">
-                    <button onclick="changeLanguage('es')" data-lang-btn="es" class="flex items-center text-xs font-bold text-gray-500 hover:text-brand-orange transition-all duration-200 transform hover:scale-110"><img src="flag_es.png" class="w-5 h-auto inline-block mr-1.5 rounded-sm shadow-sm" alt="ES">ES</button>
-                    <button onclick="changeLanguage('val')" data-lang-btn="val" class="flex items-center text-xs font-bold text-gray-500 hover:text-brand-orange transition-all duration-200 transform hover:scale-110"><img src="flag_val.png" class="w-5 h-auto inline-block mr-1.5 rounded-sm shadow-sm" alt="VAL">VAL</button>
-                    <button onclick="changeLanguage('en')" data-lang-btn="en" class="flex items-center text-xs font-bold text-gray-500 hover:text-brand-orange transition-all duration-200 transform hover:scale-110"><img src="flag_en.png?v=2" class="w-6 h-auto inline-block mr-1.5 rounded-sm shadow-sm" alt="EN">EN</button>
+                    <button aria-label="Seleccionar idioma Español" onclick="changeLanguage('es')" data-lang-btn="es" class="flex items-center text-xs font-bold text-gray-500 hover:text-brand-orange transition-all duration-200 transform hover:scale-110"><img src="flag_es.png" class="w-5 h-auto inline-block mr-1.5 rounded-sm shadow-sm" alt="">ES</button>
+                    <button aria-label="Seleccionar idioma Valenciano" onclick="changeLanguage('val')" data-lang-btn="val" class="flex items-center text-xs font-bold text-gray-500 hover:text-brand-orange transition-all duration-200 transform hover:scale-110"><img src="flag_val.png" class="w-5 h-auto inline-block mr-1.5 rounded-sm shadow-sm" alt="">VAL</button>
+                    <button aria-label="Seleccionar idioma Inglés" onclick="changeLanguage('en')" data-lang-btn="en" class="flex items-center text-xs font-bold text-gray-500 hover:text-brand-orange transition-all duration-200 transform hover:scale-110"><img src="flag_en.png?v=2" class="w-6 h-auto inline-block mr-1.5 rounded-sm shadow-sm" alt="">EN</button>
                 </div>
             </div>
         </div>
@@ -60,7 +62,7 @@
             <h2 class="text-3xl md:text-4xl font-bold text-brand-dark" data-i18n="sol_tech_title">Tecnología de Vanguardia</h2>
             <p class="text-xl text-gray-600 mt-4" data-i18n="sol_tech_sub">Integración perfecta bajo cumplimiento estricto del <strong>CTE HS 4</strong>.</p>
         </div>
-        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12">
+        <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12" data-aos="fade-up">
             <div class="bg-white p-8 rounded-2xl shadow-xl border border-gray-100">
                 <h3 class="text-2xl font-bold text-brand-dark mb-4" data-i18n="sol_turb_title">Sistema de Microturbinas</h3>
                 <p class="text-gray-600 mb-6 text-lg leading-relaxed" data-i18n="sol_turb_desc">Instalación en línea con las tuberías principales para aprovechar la presión residual. Diseño hidrodinámico que maximiza la conversión de energía cinética.</p>
@@ -84,7 +86,7 @@
     <section class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 text-center">
             <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-12" data-i18n="sol_schema_title">Esquema Técnico de Integración</h2>
-            <div class="relative inline-block max-w-5xl w-full">
+            <div class="relative inline-block max-w-5xl w-full" data-aos="fade-up">
                 <img id="main-schematic" src="Esquema_ES.png" alt="Esquema Técnico de Integración" class="mx-auto rounded-3xl shadow-2xl border border-gray-100 w-full">
             </div>
             <p class="text-gray-600 mt-6 max-w-4xl mx-auto italic" data-i18n="sol_schema_desc">Visualización de la integración en línea con bypass inteligente, diseñada bajo estándares del Código Técnico de la Edificación (CTE HS 4)</p>
@@ -93,7 +95,7 @@
 
     <!-- Ventaja Competitiva: Gráfica -->
     <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-16 items-center">
+        <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-16 items-center" data-aos="fade-up">
             <div>
                 <h2 class="text-3xl font-bold text-brand-dark mb-6" data-i18n="sol_vs_title">Generación 24/7 vs. Solar</h2>
                 <p class="text-lg text-gray-600 leading-relaxed mb-8" data-i18n="sol_vs_desc">Atacamos la debilidad de las renovables tradicionales: la intermitencia. Mientras el sol se pone, el flujo de agua en hoteles e industrias sigue generando rentabilidad de forma constante.</p>
@@ -110,7 +112,7 @@
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold text-brand-dark" data-i18n="sol_install_title">Proceso de Instalación Llave en Mano</h2>
             </div>
-            <div class="grid md:grid-cols-4 gap-8">
+            <div class="grid md:grid-cols-4 gap-8" data-aos="fade-up">
                 <!-- Paso 1 -->
                 <div class="bg-white p-8 rounded-2xl shadow-lg border-t-4 border-brand-orange text-center">
                     <div class="text-4xl font-black text-gray-200 mb-4">1</div>
@@ -187,37 +189,7 @@
         </div>
     </footer>
 
-    <script>
-        // Gráfico Ventaja Competitiva: 24/7 vs Solar
-        const ctx = document.getElementById('generationChart').getContext('2d');
-        window.generationChart = new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ['00h', '04h', '08h', '12h', '16h', '20h', '23h'],
-                datasets: [{
-                    label: 'Hydro-Spark (Constante 24/7)',
-                    data: [100, 100, 100, 100, 100, 100, 100],
-                    borderColor: '#FF6B00',
-                    backgroundColor: 'rgba(255,107,0,0.1)',
-                    borderWidth: 5,
-                    fill: true,
-                    tension: 0
-                }, {
-                    label: 'Solar (Intermitente)',
-                    data: [0, 0, 25, 100, 85, 10, 0],
-                    borderColor: '#004A8F',
-                    borderWidth: 3,
-                    borderDash: [8, 5],
-                    tension: 0.4
-                }]
-            },
-            options: {
-                responsive: true,
-                plugins: { legend: { position: 'bottom', labels: { font: { weight: 'bold' } } } },
-                scales: { y: { display: false } }
-            }
-        });
-    </script>
+
 
     <!-- Legal Modal -->
     <div id="legalModal" class="hidden fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">
@@ -231,6 +203,54 @@
         </div>
     </div>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ once: true, duration: 800, offset: 100 });</script>
     <script src="i18n.js"></script>
+    <script>
+        const ctx = document.getElementById('generationChart').getContext('2d');
+        window.generationChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['00:00', '04:00', '08:00', '12:00', '16:00', '20:00', '23:59'],
+                datasets: [
+                    {
+                        label: 'Hydro-Spark (Constante 24/7)',
+                        data: [1.38, 1.38, 1.38, 1.38, 1.38, 1.38, 1.38],
+                        borderColor: '#FF6B00',
+                        backgroundColor: 'rgba(255, 107, 0, 0.1)',
+                        borderWidth: 4,
+                        fill: true,
+                        tension: 0.1
+                    },
+                    {
+                        label: 'Solar (Intermitente)',
+                        data: [0, 0, 1.2, 3.5, 2.8, 0.5, 0],
+                        borderColor: '#004A8F',
+                        backgroundColor: 'rgba(0, 74, 143, 0.1)',
+                        borderWidth: 2,
+                        borderDash: [5, 5],
+                        fill: true,
+                        tension: 0.4
+                    }
+                ]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: { position: 'top', labels: { font: { family: 'Inter', weight: 'bold' } } },
+                    tooltip: { mode: 'index', intersect: false }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: { display: true, text: 'Potencia (kW)', font: { weight: 'bold' } }
+                    },
+                    x: {
+                        title: { display: true, text: 'Hora del día', font: { weight: 'bold' } }
+                    }
+                }
+            }
+        });
+    </script>
 </body>
 </html>

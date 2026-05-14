@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hydro-Spark | Energía limpia 24/7</title>
+    <link rel="icon" type="image/png" href="logo-final.png">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         tailwind.config = {
@@ -46,9 +48,9 @@
                 
                 <!-- Language Selector -->
                 <div class="flex space-x-6 ml-2 border-l pl-5 border-gray-300">
-                    <button onclick="changeLanguage('es')" data-lang-btn="es" class="flex items-center text-xs font-bold text-gray-500 hover:text-brand-orange transition-all duration-200 transform hover:scale-110"><img src="flag_es.png" class="w-5 h-auto inline-block mr-1.5 rounded-sm shadow-sm" alt="ES">ES</button>
-                    <button onclick="changeLanguage('val')" data-lang-btn="val" class="flex items-center text-xs font-bold text-gray-500 hover:text-brand-orange transition-all duration-200 transform hover:scale-110"><img src="flag_val.png" class="w-5 h-auto inline-block mr-1.5 rounded-sm shadow-sm" alt="VAL">VAL</button>
-                    <button onclick="changeLanguage('en')" data-lang-btn="en" class="flex items-center text-xs font-bold text-gray-500 hover:text-brand-orange transition-all duration-200 transform hover:scale-110"><img src="flag_en.png?v=2" class="w-6 h-auto inline-block mr-1.5 rounded-sm shadow-sm" alt="EN">EN</button>
+                    <button aria-label="Seleccionar idioma Español" onclick="changeLanguage('es')" data-lang-btn="es" class="flex items-center text-xs font-bold text-gray-500 hover:text-brand-orange transition-all duration-200 transform hover:scale-110"><img src="flag_es.png" class="w-5 h-auto inline-block mr-1.5 rounded-sm shadow-sm" alt="">ES</button>
+                    <button aria-label="Seleccionar idioma Valenciano" onclick="changeLanguage('val')" data-lang-btn="val" class="flex items-center text-xs font-bold text-gray-500 hover:text-brand-orange transition-all duration-200 transform hover:scale-110"><img src="flag_val.png" class="w-5 h-auto inline-block mr-1.5 rounded-sm shadow-sm" alt="">VAL</button>
+                    <button aria-label="Seleccionar idioma Inglés" onclick="changeLanguage('en')" data-lang-btn="en" class="flex items-center text-xs font-bold text-gray-500 hover:text-brand-orange transition-all duration-200 transform hover:scale-110"><img src="flag_en.png?v=2" class="w-6 h-auto inline-block mr-1.5 rounded-sm shadow-sm" alt="">EN</button>
                 </div>
             </div>
         </div>
@@ -56,7 +58,7 @@
 
     <!-- Subvenciones (PESTEL Político/Legal) -->
     <section id="subsidies" class="py-32 bg-gray-50 min-h-screen">
-        <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-16 items-center">
+        <div class="max-w-7xl mx-auto px-4 grid lg:grid-cols-2 gap-16 items-center" data-aos="fade-up">
             <div>
                 <h2 class="text-3xl md:text-4xl font-bold text-brand-dark mb-6" data-i18n="sub_title">Financiación y Subvenciones</h2>
                 <p class="text-lg text-gray-600 leading-relaxed mb-8" data-i18n="sub_desc">Aprovecha el <strong>RD 477/2021</strong> que subvenciona hasta el 45% del coste. También ayudamos a monetizar cada kWh mediante el sistema de <strong>CAEs (RD 36/2023)</strong>.</p>
@@ -86,7 +88,7 @@
         <!-- Cronograma de Tramitación -->
         <div class="max-w-7xl mx-auto px-4 mt-24">
             <h3 class="text-2xl font-bold text-center text-brand-dark mb-12" data-i18n="sub_crono_title">Cronograma de Tramitación</h3>
-            <div class="grid md:grid-cols-3 gap-8 relative">
+            <div class="grid md:grid-cols-3 gap-8 relative" data-aos="fade-up">
                 <!-- Línea conectora (visible en desktop) -->
                 <div class="hidden md:block absolute top-1/2 left-0 w-full h-1 bg-gray-200 -z-10 transform -translate-y-1/2"></div>
                 
@@ -120,7 +122,7 @@
             <div class="text-center mb-16">
                 <h2 class="text-3xl md:text-4xl font-bold text-brand-dark" data-i18n="sub_iso_title">Garantía de Calidad y Cumplimiento Normativo</h2>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8" data-aos="fade-up">
                 <!-- ISO 50001 -->
                 <div class="bg-white p-8 rounded-3xl shadow-lg border-t-4 border-brand-orange text-center">
                     <div class="w-20 h-20 mx-auto bg-brand-orange/10 text-brand-orange rounded-full flex items-center justify-center font-black text-sm mb-6">ISO 50001</div>
@@ -190,6 +192,8 @@
         </div>
     </div>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ once: true, duration: 800, offset: 100 });</script>
     <script src="i18n.js"></script>
 </body>
 </html>

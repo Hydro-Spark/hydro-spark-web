@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hydro-Spark | Energía limpia 24/7</title>
+    <link rel="icon" type="image/png" href="logo-final.png">
     <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
         tailwind.config = {
@@ -46,9 +48,9 @@
                 
                 <!-- Language Selector -->
                 <div class="flex space-x-6 ml-2 border-l pl-5 border-gray-300">
-                    <button onclick="changeLanguage('es')" data-lang-btn="es" class="flex items-center text-xs font-bold text-gray-500 hover:text-brand-orange transition-all duration-200 transform hover:scale-110"><img src="flag_es.png" class="w-5 h-auto inline-block mr-1.5 rounded-sm shadow-sm" alt="ES">ES</button>
-                    <button onclick="changeLanguage('val')" data-lang-btn="val" class="flex items-center text-xs font-bold text-gray-500 hover:text-brand-orange transition-all duration-200 transform hover:scale-110"><img src="flag_val.png" class="w-5 h-auto inline-block mr-1.5 rounded-sm shadow-sm" alt="VAL">VAL</button>
-                    <button onclick="changeLanguage('en')" data-lang-btn="en" class="flex items-center text-xs font-bold text-gray-500 hover:text-brand-orange transition-all duration-200 transform hover:scale-110"><img src="flag_en.png?v=2" class="w-6 h-auto inline-block mr-1.5 rounded-sm shadow-sm" alt="EN">EN</button>
+                    <button aria-label="Seleccionar idioma Español" onclick="changeLanguage('es')" data-lang-btn="es" class="flex items-center text-xs font-bold text-gray-500 hover:text-brand-orange transition-all duration-200 transform hover:scale-110"><img src="flag_es.png" class="w-5 h-auto inline-block mr-1.5 rounded-sm shadow-sm" alt="">ES</button>
+                    <button aria-label="Seleccionar idioma Valenciano" onclick="changeLanguage('val')" data-lang-btn="val" class="flex items-center text-xs font-bold text-gray-500 hover:text-brand-orange transition-all duration-200 transform hover:scale-110"><img src="flag_val.png" class="w-5 h-auto inline-block mr-1.5 rounded-sm shadow-sm" alt="">VAL</button>
+                    <button aria-label="Seleccionar idioma Inglés" onclick="changeLanguage('en')" data-lang-btn="en" class="flex items-center text-xs font-bold text-gray-500 hover:text-brand-orange transition-all duration-200 transform hover:scale-110"><img src="flag_en.png?v=2" class="w-6 h-auto inline-block mr-1.5 rounded-sm shadow-sm" alt="">EN</button>
                 </div>
             </div>
         </div>
@@ -56,15 +58,20 @@
 
     <!-- Calculadora de ROI (Lógica Real) -->
     <section id="roi" class="py-32 bg-white min-h-screen">
-        <div class="max-w-4xl mx-auto px-4 bg-gray-900 rounded-[3rem] p-10 text-white relative shadow-2xl">
+        <div class="max-w-4xl mx-auto px-4 bg-gray-900 rounded-[3rem] p-10 text-white relative shadow-2xl" data-aos="fade-up">
             <div class="absolute top-0 right-10 -mt-8 bg-brand-orange px-6 py-2 rounded-xl font-bold shadow-lg" data-i18n="roi_amort">Amortización ~2.5 años</div>
             <h2 class="text-3xl font-bold text-center mb-10" data-i18n="roi_title">Simulador de Impacto Financiero</h2>
             <div class="grid md:grid-cols-2 gap-12">
                 <div class="space-y-12">
                     <div>
                         <label class="block text-sm font-bold text-gray-400 uppercase tracking-widest mb-4" data-i18n="roi_input_label">Consumo Diario (m³/día)</label>
-                        <input type="range" id="waterInput" min="100" max="2500" value="800" class="w-full h-3 bg-white/10 rounded-lg appearance-none cursor-pointer accent-brand-orange">
-                        <div class="text-5xl font-black text-white mt-4"><span id="waterValue">800</span> m³</div>
+                        <input type="range" id="waterInput" min="100" max="2500" value="800" class="w-full h-3 bg-white/10 rounded-lg appearance-none cursor-pointer accent-brand-orange mb-8">
+                        <div class="text-5xl font-black text-white"><span id="waterValue">800</span> m³</div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-gray-400 uppercase tracking-widest mb-4" data-i18n="roi_price_label">Precio Energía Estimado (€/kWh)</label>
+                        <input type="range" id="priceInput" min="0.10" max="0.50" step="0.01" value="0.30" class="w-full h-3 bg-white/10 rounded-lg appearance-none cursor-pointer accent-brand-orange mb-8">
+                        <div class="text-5xl font-black text-white"><span id="priceValue">0.30</span> €</div>
                     </div>
                     <div class="p-4 bg-white/5 rounded-xl border border-white/10 text-sm italic" data-i18n="roi_hint">"Rentable para consumos mayores a 500 m³/día".</div>
                 </div>
@@ -85,7 +92,7 @@
         <!-- ¿Cómo calculamos tu ahorro? -->
         <div class="max-w-5xl mx-auto px-4 mt-20">
             <h3 class="text-2xl font-bold text-center text-brand-dark mb-10" data-i18n="roi_how_title">¿Cómo calculamos tu ahorro?</h3>
-            <div class="grid md:grid-cols-2 gap-10">
+            <div class="grid md:grid-cols-2 gap-10" data-aos="fade-up">
                 <div class="bg-gray-50 p-8 rounded-2xl shadow-md border-t-4 border-brand-blue">
                     <h4 class="text-xl font-bold text-brand-dark mb-4" data-i18n="roi_tech_title">Variables Técnicas</h4>
                     <p class="text-gray-600 leading-relaxed" data-i18n="roi_tech_desc">El retorno de ~2.5 años se basa en la constancia del flujo hídrico, la presión nominal de la red y la volatilidad del mercado eléctrico OMIE.</p>
@@ -127,18 +134,26 @@
     <script>
         // Lógica de la calculadora dinámica
         const waterInput = document.getElementById('waterInput');
+        const priceInput = document.getElementById('priceInput');
         const waterValue = document.getElementById('waterValue');
+        const priceValue = document.getElementById('priceValue');
         const kwhValue = document.getElementById('kwhValue');
         const euroValue = document.getElementById('euroValue');
 
-        waterInput.addEventListener('input', () => {
+        function updateCalculator() {
             const val = waterInput.value;
+            const price = parseFloat(priceInput.value);
             waterValue.innerText = val;
+            priceValue.innerText = price.toFixed(2);
+            
             const kwh = Math.round((val / 800) * 1000);
-            kwhValue.innerText = kwh.toLocaleString();
-            const euros = Math.round(kwh * 12 * 0.30);
-            euroValue.innerText = euros.toLocaleString();
-        });
+            kwhValue.innerText = kwh.toLocaleString('es-ES');
+            const euros = Math.round(kwh * 12 * price);
+            euroValue.innerText = euros.toLocaleString('es-ES');
+        }
+
+        waterInput.addEventListener('input', updateCalculator);
+        priceInput.addEventListener('input', updateCalculator);
     </script>
 
     <!-- Legal Modal -->
@@ -153,6 +168,8 @@
         </div>
     </div>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init({ once: true, duration: 800, offset: 100 });</script>
     <script src="i18n.js"></script>
 </body>
 </html>
